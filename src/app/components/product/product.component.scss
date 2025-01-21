@@ -1,0 +1,35 @@
+@import "../../../assets/helpers/mixins";
+
+.product-card,
+.product-card__header {
+  @include flex-center;
+
+  flex-direction: column;
+
+  gap: var(--card-gap);
+}
+
+.product-card {
+  padding: 20px;
+
+  border: 1px solid #000;
+  border-radius: var(--card-border-radius);
+
+  &__image {
+    max-width: 200px;
+  }
+
+  &__header {
+    &-title {
+      font-weight: 700;
+
+      text-align: center;
+    }
+
+    &-price {
+      span {
+        font-weight: 700;
+      }
+    }
+  }
+}
