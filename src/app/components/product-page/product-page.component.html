@@ -1,3 +1,9 @@
 <p>Страница продукта</p>
 
 <a routerLink="/">Ссылка на главную страницу</a>
+
+<mat-form-field>
+  <input matInput [matDatepicker]="picker">
+  <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
