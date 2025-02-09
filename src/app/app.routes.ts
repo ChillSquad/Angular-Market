@@ -1,4 +1,4 @@
-import { ProductPageComponent } from './components/product-page/product-page.component';
+import { ProductPageComponent } from './pages/product-page/product-page.component';
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
@@ -11,7 +11,7 @@ export const routes: Routes = [
   {
     path: 'product-page',
     loadComponent: () =>
-      import('./components/product-page/product-page.component').then(
+      import('./pages/product-page/product-page.component').then(
         (m) => m.ProductPageComponent
       ),
   },
