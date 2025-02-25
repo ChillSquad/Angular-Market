@@ -1,18 +1,23 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
-import {MatFormField} from '@angular/material/form-field';
-import {MatDatepicker, MatDatepickerInput, MatDatepickerToggle} from '@angular/material/datepicker';
-import {MatInput, MatInputModule} from '@angular/material/input';
-import {CommonModule} from '@angular/common';
-
+import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   providers: [],
-  imports: [MatInputModule, RouterLink],
+  imports: [
+    CommonModule,
+    MatButtonModule
+  ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
+  constructor(private router: Router) {}
+
+  goToProductPage() {
+    this.router.navigate(['/product-page']);
+  }
 }

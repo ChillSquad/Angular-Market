@@ -5,14 +5,10 @@ export const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    loadComponent: () =>
-      import('./home/home.component').then((m) => m.HomeComponent),
+    loadComponent: () => import('./home/home.component').then((m) => m.HomeComponent),
   },
   {
     path: 'product-page',
-    loadComponent: () =>
-      import('./pages/product-page/product-page.component').then(
-        (m) => m.ProductPageComponent
-      ),
+    loadComponent: () => import('./pages/product-page/product-page.component').then((m) => m.ProductPageComponent),
   },
 ];
